@@ -13,7 +13,7 @@ export default function Home() {
       <header className="bg-zinc-900 text-white">
         <div className="container mx-auto px-4 py-6 flex justify-between items-center">
           <div className="flex items-center gap-2">
-            <span className="text-2xl font-bold">PokerGermany.de</span>
+            <span className="text-2xl font-bold">PokerBerlin.club</span>
           </div>
           <nav className="hidden md:flex gap-8 font-medium">
             <a href="#about" className="hover:text-red-500 transition-colors">
@@ -41,13 +41,13 @@ export default function Home() {
       {/* Hero Section */}
       <section className="relative h-[600px] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 bg-black/60 z-10"></div>
-        <div
-          className="absolute inset-0 bg-cover bg-center"
-          style={{
-            backgroundImage: "url('/placeholder.svg?height=600&width=1200')",
-            backgroundPosition: "center",
-          }}
-        ></div>
+        <Image
+          src={image1}
+          alt="Poker Night Background"
+          fill
+          className="object-cover"
+          priority
+        />
         <div className="container mx-auto px-4 relative z-20 text-center text-white">
           <h1 className="text-5xl md:text-7xl font-bold mb-6">
             Berlin Poker Nights
@@ -325,7 +325,7 @@ export default function Home() {
         <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="mb-6 md:mb-0">
-              <h3 className="text-2xl font-bold mb-2">PokerGermany.de</h3>
+              <h3 className="text-2xl font-bold mb-2">PokerBerlin.club</h3>
               <p className="text-gray-400">Berlin's Premier Poker Community</p>
             </div>
             <nav className="flex flex-wrap gap-8 justify-center mb-6 md:mb-0">
@@ -372,7 +372,7 @@ export default function Home() {
           </div>
           <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
             <p>
-              &copy; {new Date().getFullYear()} PokerGermany.de. All rights
+              &copy; {new Date().getFullYear()} PokerBerlin.club. All rights
               reserved.
             </p>
           </div>
