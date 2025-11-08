@@ -17,6 +17,39 @@ export const metadata: Metadata = {
   title: "PokerBerlin.club - Berlin's Premier Poker Community",
   description:
     "Join Berlin's exclusive poker community. €50 buy-in, great company, and a professional atmosphere.",
+  metadataBase: new URL("https://pokerberlin.club"),
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    title: "PokerBerlin.club - Berlin's Premier Poker Community",
+    description:
+      "Join Berlin's exclusive poker community. €50 buy-in, great company, and a professional atmosphere.",
+    url: "https://pokerberlin.club/",
+    siteName: "PokerBerlin.club",
+    images: [
+      {
+        url: "/preview.png",
+        width: 1200,
+        height: 630,
+        alt: "PokerBerlin.club – Berlin Poker Community",
+      },
+    ],
+    type: "website",
+    locale: "en_US",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "PokerBerlin.club - Berlin's Premier Poker Community",
+    description:
+      "Join Berlin's exclusive poker community. €50 buy-in, great company, and a professional atmosphere.",
+    images: ["/preview.png"],
+  },
+  icons: {
+    icon: "/icon.png",
+    apple: "/icon.png",
+    shortcut: "/icon.png",
+  },
 };
 
 export default function RootLayout({

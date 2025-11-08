@@ -57,4 +57,5 @@ vercel
 
 - add past events and photos
 - resources section with poker cards description and link to app
+- fix opengraph
 - share in group

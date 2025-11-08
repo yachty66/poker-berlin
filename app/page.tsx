@@ -81,9 +81,15 @@ export default function Home() {
             Professional atmosphere.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button className="bg-red-600 hover:bg-red-700 text-lg py-6 px-8">
-              <Link href="#join">Join Our Community</Link>
-            </Button>
+            <a
+              href="https://chat.whatsapp.com/HDUmzt4hPCMF0sxgMkLsW2"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Button className="bg-red-600 hover:bg-red-700 text-lg py-6 px-8">
+                Join Our Community
+              </Button>
+            </a>
             <Button
               variant="outline"
               className="text-lg py-6 px-8 bg-transparent border-white text-white hover:bg-white/10"
@@ -236,11 +242,98 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Resources Section */}
+      <section className="relative py-24 bg-gradient-to-b from-zinc-800 via-black to-zinc-900 overflow-hidden">
+        {/* Background elements */}
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute top-1/4 left-20 w-64 h-64 bg-red-600 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute bottom-1/4 right-20 w-80 h-80 bg-red-600 rounded-full blur-3xl animate-pulse delay-500"></div>
+        </div>
+
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="text-center mb-16">
+            <h2 className="text-5xl md:text-6xl font-bold mb-4 text-white">
+              Resources
+            </h2>
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+              Everything you need to improve your game
+            </p>
+          </div>
+
+          <div className="max-w-6xl mx-auto space-y-12">
+            {/* Poker Hand Rankings */}
+            <div className="group">
+              <div className="relative">
+                <div className="absolute inset-0 bg-gradient-to-br from-red-600/20 to-transparent rounded-3xl blur-2xl group-hover:blur-3xl transition-all duration-300"></div>
+                <div className="relative bg-zinc-800/50 backdrop-blur-sm border border-zinc-700 rounded-3xl p-8 hover:border-red-600 transition-all duration-300">
+                  <h3 className="text-3xl font-bold text-white mb-6 text-center">
+                    Poker Hand Rankings
+                  </h3>
+                  <div className="relative rounded-2xl overflow-hidden shadow-2xl">
+                    <Image
+                      src="/poker-hands.jpg"
+                      alt="Poker Hand Rankings"
+                      width={1200}
+                      height={800}
+                      className="w-full h-auto"
+                      priority
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Recommended App */}
+            <div className="group">
+              <div className="relative">
+                <div className="absolute inset-0 bg-gradient-to-br from-red-600/20 to-transparent rounded-3xl blur-2xl group-hover:blur-3xl transition-all duration-300"></div>
+                <div className="relative bg-zinc-800/50 backdrop-blur-sm border border-zinc-700 rounded-3xl p-8 hover:border-red-600 transition-all duration-300">
+                  <div className="text-center">
+                    <h3 className="text-3xl font-bold text-white mb-4">
+                      Practice Your Skills
+                    </h3>
+                    <p className="text-xl text-gray-300 mb-6 max-w-2xl mx-auto">
+                      Want to improve between games? Check out Offsuit—a
+                      minimalistic, free poker app designed for learning and
+                      casual play.
+                    </p>
+                    <a
+                      href="https://offsuit.app/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-3 bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 text-white font-bold text-lg px-8 py-4 rounded-full transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-red-600/50"
+                    >
+                      <svg
+                        className="w-6 h-6"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                        />
+                      </svg>
+                      Visit Offsuit App
+                    </a>
+                    <p className="text-sm text-gray-500 mt-4">
+                      (Unaffiliated recommendation)
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Footer */}
       <footer className="bg-zinc-900 text-white py-8">
         <div className="container mx-auto px-4 text-center">
           <p className="text-gray-400">
-            &copy; 2025 PokerBerlin.club. All rights reserved.
+            &copy; 2025 Pokerberlin.club. All rights reserved.
           </p>
         </div>
       </footer>
