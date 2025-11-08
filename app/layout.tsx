@@ -16,7 +16,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "PokerBerlin.club - Berlin's Premier Poker Community",
   description:
-    "Join Berlin's exclusive poker community every Wednesday. €50 buy-in, great company, and a professional atmosphere.",
+    "Join Berlin's exclusive poker community. €50 buy-in, great company, and a professional atmosphere.",
 };
 
 export default function RootLayout({

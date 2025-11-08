@@ -53,3 +53,8 @@ export default nextConfig;
 ```bash
 vercel
 ```
+
+
+- add past events and photos
+- resources section with poker cards description and link to app
+- share in group

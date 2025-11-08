@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { Calendar, Clock, MapPin, Trophy, Users } from "lucide-react";
+import { Calendar, Clock, MapPin, Users } from "lucide-react";
 import Image from "next/image";
 import image1 from "../public/image1.jpeg";
 import image2 from "../public/image2.jpeg";
@@ -10,52 +10,25 @@ import image3 from "../public/image3.jpeg";
 export default function Home() {
   return (
     <div className="min-h-screen bg-gray-50">
-      {/* Header */}
-      <header className="bg-zinc-900 text-white">
-        <div className="container mx-auto px-4 py-6 flex justify-between items-center">
-          <div className="flex items-center gap-2">
-            <span className="text-2xl font-bold">PokerBerlin.club</span>
-          </div>
-          <nav className="hidden md:flex gap-8 font-medium">
-            <a href="#about" className="hover:text-red-500 transition-colors">
-              About
-            </a>
-            <a href="#events" className="hover:text-red-500 transition-colors">
-              Events
-            </a>
-            <a href="#prizes" className="hover:text-red-500 transition-colors">
-              Prizes
-            </a>
-            <a href="#gallery" className="hover:text-red-500 transition-colors">
-              Gallery
-            </a>
-            <a href="#join" className="hover:text-red-500 transition-colors">
-              Join Us
-            </a>
-          </nav>
-          <Button className="bg-red-600 hover:bg-red-700">
-            <Link href="#join">Join Now</Link>
-          </Button>
-        </div>
-      </header>
-
       {/* Hero Section */}
-      <section className="relative h-[600px] flex items-center justify-center overflow-hidden">
+      <section className="relative h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 bg-black/60 z-10"></div>
-        <Image
-          src={image1}
-          alt="Poker Night Background"
-          fill
-          className="object-cover"
-          priority
+        <video
+          className="absolute inset-0 w-full h-full object-cover"
+          src="/pokermain.mov"
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="auto"
         />
         <div className="container mx-auto px-4 relative z-20 text-center text-white">
           <h1 className="text-5xl md:text-7xl font-bold mb-6">
             Berlin Poker Nights
           </h1>
           <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
-            Join Berlin's exclusive poker community every Wednesday. €50 buy-in.
-            Great company. Professional atmosphere.
+            Join Berlin's exclusive poker community. €50 buy-in. Great company.
+            Professional atmosphere.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button className="bg-red-600 hover:bg-red-700 text-lg py-6 px-8">
@@ -65,8 +38,153 @@ export default function Home() {
               variant="outline"
               className="text-lg py-6 px-8 bg-transparent border-white text-white hover:bg-white/10"
             >
-              <Link href="#events">View Schedule</Link>
+              <Link href="#past-events">View Past Events</Link>
             </Button>
+          </div>
+        </div>
+      </section>
+
+      {/* Quick About Section */}
+      <section className="relative py-24 bg-gradient-to-b from-black via-zinc-900 to-zinc-900 overflow-hidden">
+        {/* Animated background elements */}
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute top-20 left-10 w-72 h-72 bg-red-600 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute bottom-20 right-10 w-96 h-96 bg-red-600 rounded-full blur-3xl animate-pulse delay-700"></div>
+        </div>
+
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="max-w-5xl mx-auto">
+            {/* Main heading with glow effect */}
+            <div className="text-center mb-12">
+              <div className="inline-block relative mb-6">
+                <div className="absolute inset-0 bg-red-600 blur-2xl opacity-50"></div>
+                <h2 className="text-4xl md:text-6xl font-bold text-white relative leading-tight">
+                  Berlin's Poker Community
+                  <br />
+                  <span className="text-red-500">for Tech Professionals</span>
+                </h2>
+              </div>
+              <p className="text-xl md:text-2xl text-gray-300 leading-relaxed max-w-3xl mx-auto">
+                A community of startup founders, VCs, and engineers who share a
+                passion for poker. Games are scheduled organically through
+                WhatsApp—bringing together like-minded professionals for cash
+                games in a relaxed, competitive atmosphere.
+              </p>
+            </div>
+
+            {/* Feature cards */}
+            <div className="grid md:grid-cols-3 gap-6 mt-16">
+              <div className="group relative">
+                <div className="absolute inset-0 bg-gradient-to-br from-red-600/20 to-transparent rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-300"></div>
+                <div className="relative bg-zinc-800/50 backdrop-blur-sm border border-zinc-700 rounded-2xl p-8 hover:border-red-600 transition-all duration-300 hover:transform hover:scale-105">
+                  <div className="w-14 h-14 bg-red-600/20 rounded-xl flex items-center justify-center mb-4 group-hover:bg-red-600/30 transition-colors">
+                    <Users className="h-7 w-7 text-red-500" />
+                  </div>
+                  <h3 className="text-xl font-bold text-white mb-2">
+                    Tech Community
+                  </h3>
+                  <p className="text-gray-400">
+                    Founders, VCs & Engineers building the future
+                  </p>
+                </div>
+              </div>
+
+              <div className="group relative">
+                <div className="absolute inset-0 bg-gradient-to-br from-red-600/20 to-transparent rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-300"></div>
+                <div className="relative bg-zinc-800/50 backdrop-blur-sm border border-zinc-700 rounded-2xl p-8 hover:border-red-600 transition-all duration-300 hover:transform hover:scale-105">
+                  <div className="w-14 h-14 bg-red-600/20 rounded-xl flex items-center justify-center mb-4 group-hover:bg-red-600/30 transition-colors">
+                    <Calendar className="h-7 w-7 text-red-500" />
+                  </div>
+                  <h3 className="text-xl font-bold text-white mb-2">
+                    Flexible Schedule
+                  </h3>
+                  <p className="text-gray-400">
+                    Organized organically via WhatsApp group
+                  </p>
+                </div>
+              </div>
+
+              <div className="group relative">
+                <div className="absolute inset-0 bg-gradient-to-br from-red-600/20 to-transparent rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-300"></div>
+                <div className="relative bg-zinc-800/50 backdrop-blur-sm border border-zinc-700 rounded-2xl p-8 hover:border-red-600 transition-all duration-300 hover:transform hover:scale-105">
+                  <div className="w-14 h-14 bg-red-600/20 rounded-xl flex items-center justify-center mb-4 group-hover:bg-red-600/30 transition-colors">
+                    <MapPin className="h-7 w-7 text-red-500" />
+                  </div>
+                  <h3 className="text-xl font-bold text-white mb-2">
+                    Cash Games
+                  </h3>
+                  <p className="text-gray-400">
+                    Real money poker in the heart of Berlin
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Past Events */}
+      <section
+        id="past-events"
+        className="py-24 bg-gradient-to-b from-zinc-900 to-zinc-800"
+      >
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-5xl md:text-6xl font-bold mb-4 text-white">
+              Past Events
+            </h2>
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+              Relive the excitement from our previous poker nights
+            </p>
+          </div>
+
+          <div className="space-y-16">
+            {[
+              {
+                date: "November 1, 2025",
+                photos: ["/image1.jpeg", "/image2.jpeg", "/image3.jpeg"],
+              },
+              {
+                date: "October 25, 2025",
+                photos: ["/image2.jpeg", "/image3.jpeg"],
+              },
+            ].map((event, i) => (
+              <div key={i} className="group">
+                <div className="flex items-center gap-4 mb-8">
+                  <div className="h-px bg-gradient-to-r from-transparent via-red-600 to-transparent flex-1"></div>
+                  <div className="relative">
+                    <div className="absolute inset-0 bg-red-600 blur-xl opacity-50 group-hover:opacity-75 transition-opacity"></div>
+                    <h3 className="text-3xl md:text-4xl font-bold text-white relative px-8 py-3 bg-zinc-800 rounded-full border-2 border-red-600">
+                      {event.date}
+                    </h3>
+                  </div>
+                  <div className="h-px bg-gradient-to-r from-transparent via-red-600 to-transparent flex-1"></div>
+                </div>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                  {event.photos.map((photo, j) => (
+                    <div
+                      key={j}
+                      className="group/photo relative aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl"
+                    >
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent z-10 opacity-0 group-hover/photo:opacity-100 transition-opacity duration-300"></div>
+                      <Image
+                        src={photo}
+                        alt={`Past event ${event.date} photo ${j + 1}`}
+                        fill
+                        className="object-cover group-hover/photo:scale-110 transition-transform duration-500"
+                      />
+                      <div className="absolute bottom-0 left-0 right-0 p-6 z-20 transform translate-y-full group-hover/photo:translate-y-0 transition-transform duration-300">
+                        <div className="flex items-center gap-2 text-white">
+                          <Calendar className="h-5 w-5" />
+                          <span className="font-semibold">{event.date}</span>
+                        </div>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -123,94 +241,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Events Section */}
-      <section id="events" className="py-20 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <h2 className="text-4xl font-bold mb-12 text-center">
-            Upcoming Poker Nights
-          </h2>
-          <div className="grid md:grid-cols-3 gap-6">
-            {[1, 2, 3].map((i) => (
-              <Card
-                key={i}
-                className="overflow-hidden hover:shadow-lg transition-shadow"
-              >
-                <div className="p-6">
-                  <div className="flex justify-between items-start mb-4">
-                    <div>
-                      <h3 className="text-xl font-bold">
-                        Wednesday Poker Night
-                      </h3>
-                      <p className="text-gray-600">
-                        {new Date(
-                          Date.now() + i * 7 * 24 * 60 * 60 * 1000
-                        ).toLocaleDateString("en-US", {
-                          month: "long",
-                          day: "numeric",
-                        })}
-                      </p>
-                    </div>
-                    <span className="bg-red-600 text-white px-3 py-1 rounded-full text-sm">
-                      €50 Buy-in
-                    </span>
-                  </div>
-                  <div className="space-y-3 mb-6">
-                    <div className="flex items-center gap-3">
-                      <Clock className="h-5 w-5 text-gray-400" />
-                      <span>8:00 PM - 10:30 PM</span>
-                    </div>
-                    <div className="flex items-center gap-3">
-                      <MapPin className="h-5 w-5 text-gray-400" />
-                      <span>Berlin</span>
-                    </div>
-                    <div className="flex items-center gap-3">
-                      <Users className="h-5 w-5 text-gray-400" />
-                      <span>Limited Seats Available</span>
-                    </div>
-                  </div>
-                  <Button className="w-full bg-zinc-800 hover:bg-zinc-900">
-                    RSVP via WhatsApp
-                  </Button>
-                </div>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Prize Distribution */}
-      <section id="prizes" className="py-20 bg-white">
-        <div className="container mx-auto px-4">
-          <h2 className="text-4xl font-bold mb-12 text-center">
-            Prize Distribution
-          </h2>
-          <div className="flex flex-wrap justify-center gap-8">
-            <Card className="w-full md:w-[300px] p-8 text-center relative overflow-hidden border-0 shadow-lg">
-              <div className="absolute top-0 left-0 w-full h-2 bg-yellow-500"></div>
-              <Trophy className="h-16 w-16 text-yellow-500 mx-auto mb-4" />
-              <h3 className="text-2xl font-bold mb-2">1st Place</h3>
-              <p className="text-5xl font-bold text-yellow-500 mb-4">60%</p>
-              <p className="text-gray-600">of the prize pool</p>
-            </Card>
-
-            <Card className="w-full md:w-[300px] p-8 text-center relative overflow-hidden border-0 shadow-lg">
-              <div className="absolute top-0 left-0 w-full h-2 bg-gray-400"></div>
-              <Trophy className="h-16 w-16 text-gray-400 mx-auto mb-4" />
-              <h3 className="text-2xl font-bold mb-2">2nd Place</h3>
-              <p className="text-5xl font-bold text-gray-400 mb-4">30%</p>
-              <p className="text-gray-600">of the prize pool</p>
-            </Card>
-
-            <Card className="w-full md:w-[300px] p-8 text-center relative overflow-hidden border-0 shadow-lg">
-              <div className="absolute top-0 left-0 w-full h-2 bg-amber-700"></div>
-              <Trophy className="h-16 w-16 text-amber-700 mx-auto mb-4" />
-              <h3 className="text-2xl font-bold mb-2">3rd Place</h3>
-              <p className="text-5xl font-bold text-amber-700 mb-4">10%</p>
-              <p className="text-gray-600">of the prize pool</p>
-            </Card>
-          </div>
-        </div>
-      </section>
+      {/* Events and Prize sections removed as requested */}
 
       {/* Gallery */}
       <section id="gallery" className="py-20 bg-gray-50">
