@@ -118,7 +118,7 @@ export default function Home() {
                 <h2 className="text-4xl md:text-6xl font-bold text-white relative leading-tight">
                   Berlin's Poker Community
                   <br />
-                  <span className="text-red-500">for Tech Professionals</span>
+                  <span className="text-red-500">for Founders, VCs & Engineers</span>
                 </h2>
               </div>
               <p className="text-xl md:text-2xl text-gray-300 leading-relaxed max-w-3xl mx-auto">

@@ -73,6 +73,9 @@ export default function RootLayout({
             gtag('config', 'G-2GNCP219PY');
           `}
         </Script>
+        {/* Explicit favicon links */}
+        <link rel="icon" href="/icon.png" />
+        <link rel="apple-touch-icon" href="/icon.png" />
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
