@@ -82,17 +82,18 @@ export default function Home() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
+              className="w-full sm:w-auto"
               href="https://chat.whatsapp.com/HDUmzt4hPCMF0sxgMkLsW2"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <Button className="bg-red-600 hover:bg-red-700 text-lg py-6 px-8">
+              <Button className="w-full sm:w-auto bg-red-600 hover:bg-red-700 text-lg py-6 px-8">
                 Join Our Community
               </Button>
             </a>
             <Button
               variant="outline"
-              className="text-lg py-6 px-8 bg-transparent border-white text-white hover:bg-white/10"
+              className="w-full sm:w-auto text-lg py-6 px-8 bg-transparent border-white text-white hover:bg-white/20 hover:text-white"
             >
               <Link href="#past-events">View Past Events</Link>
             </Button>

@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "PokerBerlin.club - Berlin's Premier Poker Community",
+  title: "Pokerberlin.club - Berlin's Premier Poker Community",
   description:
     "Join Berlin's exclusive poker community. €50 buy-in, great company, and a professional atmosphere.",
   metadataBase: new URL("https://pokerberlin.club"),
@@ -26,13 +26,13 @@ export const metadata: Metadata = {
     description:
       "Join Berlin's exclusive poker community. €50 buy-in, great company, and a professional atmosphere.",
     url: "https://pokerberlin.club/",
-    siteName: "PokerBerlin.club",
+    siteName: "Pokerberlin.club",
     images: [
       {
         url: "/preview.png",
         width: 1200,
         height: 630,
-        alt: "PokerBerlin.club – Berlin Poker Community",
+        alt: "Pokerberlin.club – Berlin Poker Community",
       },
     ],
     type: "website",
