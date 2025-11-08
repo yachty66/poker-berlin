@@ -124,7 +124,7 @@ export default function Home() {
               <p className="text-xl md:text-2xl text-gray-300 leading-relaxed max-w-3xl mx-auto">
                 A community of startup founders, VCs, and engineers who share a
                 passion for poker. Games are scheduled organically through
-                WhatsApp—bringing together like-minded professionals for cash
+                WhatsApp, bringing together like-minded professionals for cash
                 games in a relaxed, competitive atmosphere.
               </p>
             </div>
@@ -294,7 +294,7 @@ export default function Home() {
                       Practice Your Skills
                     </h3>
                     <p className="text-xl text-gray-300 mb-6 max-w-2xl mx-auto">
-                      Want to improve between games? Check out Offsuit—a
+                      Want to improve between games? Check out Offsuit, a
                       minimalistic, free poker app designed for learning and
                       casual play.
                     </p>
